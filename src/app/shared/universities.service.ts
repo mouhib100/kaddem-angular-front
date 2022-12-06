@@ -1,0 +1,51 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class UniversiteService {
+  // we are going to do http call, we need to have http client, so inject http client
+  constructor(public http: HttpClient) {}
+
+  /****************************************************Service-universite*****************************************************/
+  // what we have to post, we have to post a data of type any, and this data will be posted on this server
+
+  getUniversites(): Observable<any> {
+    return this.http.get<any>(
+      'http://localhost:8090/kaddem/universite/displayallUni'
+    );
+  }
+
+  addUniversite(data: any) {
+    return this.http.post<any>(
+      'http://localhost:8090/kaddem/universite/adduniv',
+      data
+    );
+  }
+
+  putUniversite(data: any) {
+    return this.http.put<any>(
+      'http://localhost:8090/kaddem/universite/Updateuniver',
+      data
+    );
+  }
+  deleteUniversite(idUniv: number) {
+    return this.http.delete<any>(
+      'http://localhost:8090/kaddem/universite/deleteuniv/' + idUniv
+    );
+  }
+
+  assignUniversiteToDepartement(iduniv: any, iddepart: any) {
+    return this.http.get<any>(
+      `http://localhost:8090/kaddem/universite/universitetodepart/${iduniv}/${iddepart}`
+    );
+  }
+
+  retrieveDepartementsByUniversite(iduniv: number) {
+    return this.http.get<any>(
+      `http://localhost:8090/kaddem/universite/getdepart/${iduniv}`
+    );
+  }
+}

@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Add Departement</h1>
+<div mat-dialog-content>
+    <form [formGroup]="departementForm">
+        <!--data binding-->
+        <mat-form-field appearance="outline">
+            <mat-label>Departement Name</mat-label>
+            <input formControlName="nomDepartement" matInput placeholder="Placeholder">
+            <!--data binding-->
+        </mat-form-field>
+    </form>
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button mat-raised-button class="Add_Button"
+            (click)="actionBtn=='add'?addDepartement():updateDepartement()">{{actionBtn}}</button>
+        <!--the button change whenver the action is-->
+    </div>
+</div>

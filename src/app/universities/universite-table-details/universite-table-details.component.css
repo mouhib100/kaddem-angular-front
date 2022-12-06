@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 30rem;
+  margin-right: 12px;
+}
+
+td,
+th {
+  width: 25%;
+}
+.demo-button-container {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+.SearchButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.DepartmentSearchInput {
+  width: 100%;
+}

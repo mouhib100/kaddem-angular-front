@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Assign universite to departement</h1>
+<div mat-dialog-content>
+
+    <section class="example-section">
+        <h2>Select universitie :</h2>
+
+        <label id="example-radio-group-label">selected id</label>
+
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+            [(ngModel)]="SelectedUniversite">
+            <mat-radio-button class="example-radio-button" *ngFor="let universite of universities"
+                [value]="universite.idUniv">
+                {{ universite.nomUniv }}
+            </mat-radio-button>
+        </mat-radio-group>
+    </section>
+
+
+
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button mat-raised-button class="Add_Button" (click)="assignUniversiteToDepartement()">assign</button>
+        <!--the button change whenver the action is-->
+    </div>
+</div>
