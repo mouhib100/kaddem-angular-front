@@ -8,6 +8,10 @@ import { DepartementTableComponent } from './departments/departement-table/depar
 import { UniversiteTableDetailsComponent } from './universities/universite-table-details/universite-table-details.component';
 import { UniversiteTableComponent } from './universities/universite-table/universite-table.component';
 
+const routes: Routes = [
+  
+];
+
 @NgModule({
   declarations: [],
   imports: [CommonModule, AppRoutingRoutingModule],

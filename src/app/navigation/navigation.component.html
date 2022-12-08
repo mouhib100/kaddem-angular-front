@@ -35,19 +35,23 @@
 <mat-sidenav-container>
   <mat-sidenav [(opened)]="opened" mode="side">
     <mat-list>
-      <mat-list-item>
-        <mat-icon>dashboard</mat-icon>
-        <a mat-button routerLink="">Dashboard</a>
-      </mat-list-item>
 
       <mat-list-item>
         <mat-icon>school</mat-icon>
-        <a mat-button routerLink="/utilisateur/all">Utilisateurs</a>
+        <a mat-button routerLink="admin/list">list</a>
       </mat-list-item>
       <mat-list-item>
         <mat-icon>school</mat-icon>
-        <a mat-button routerLink="/etudiant">Etudiants</a>
+        <a mat-button routerLink="admin/login">login</a>
       </mat-list-item>
+
+
+
+      <mat-list-item>
+        <mat-icon>school</mat-icon>
+        <a mat-button routerLink="/users/all">dashboard</a>
+      </mat-list-item>
+
       <mat-list-item>
         <mat-icon>school</mat-icon>
         <a mat-button routerLink="/universite">Universite</a>
@@ -56,6 +60,8 @@
         <mat-icon>school</mat-icon>
         <a mat-button routerLink="/departements">Departments</a>
       </mat-list-item>
+
+
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>

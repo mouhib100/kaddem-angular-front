@@ -24,7 +24,7 @@ export class AddUserComponent implements OnInit {
     this.apiService.add("Utilisateur", f).subscribe({
         next: (res) => {
           console.log(res);
-          alert('etudiant added sucessfully');
+          alert('user added sucessfully');
           this.dialogRef.close('save'); // i need it when i add a universite the dialog close after the action is done
 
         }

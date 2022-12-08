@@ -10,6 +10,11 @@ import { DepartementTableComponent } from './departments/departement-table/depar
 import { UniversiteTableDetailsComponent } from './universities/universite-table-details/universite-table-details.component';
 
 const routes: Routes = [
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((mod) => mod.AdminModule),
+  },
   { path: '', component: DashboardComponent },
   {
     path: 'etudiant',
@@ -19,7 +24,7 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'utilisateur',
+    path: 'users',
     loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
   { path: 'Contrat/:id', component: ContratEtudiantComponent },
